@@ -61,6 +61,32 @@ names: ["class_1", "class_2", ...]
 ```
 This file contains the path of the training and testing images, along with the number of classes and their corresponding class names.
 
+The final structure should look something like this
+```
+PROJECT_1/
+├── .venv/                # Virtual environment (optional)
+├── yolov5/               # YOLOv5 repository
+│   ├── classify/         # YOLOv5 classification folder (if needed)
+│   ├── data/             # Data-related scripts and configurations
+│   ├── models/           # Model architecture definitions
+│   ├── runs/             # Training results folder
+│   │   └── train/        # Contains training runs
+│   │       └── exp/      # Specific training experiment folder
+│   │           └── best.pt  # Custom-trained model weights
+│   ├── test/             # Testing scripts
+│   ├── train/            # Training scripts and configurations
+│   ├── utils/            # Utility scripts
+│   ├── valid/            # Validation-related scripts
+│   ├── data.yaml         # Dataset configuration file
+│   ├── detect.py         # Script for running inference
+│   ├── export.py         # Script for exporting models to other formats
+│   ├── hubconf.py        # Configuration for Torch Hub
+│   ├── requirements.txt  # List of dependencies
+│   ├── train.py          # Main training script
+│   ├── val.py            # Validation script
+│   └── README.md         # YOLOv5 documentation
+├── live_detection.py     # Your custom Python script for live detection   
+```
 ## Training
 ### epochs
 Epoch is the number of times a training dataset passes through an algorithm. The number of epochs may vary depending on the size of the dataset, performance of machine, overfitting, etc.
