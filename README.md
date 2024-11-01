@@ -1,6 +1,8 @@
 # Sign-Language-Detection-yolov5
 Detecting sign language and their corresponding alphabets using the yolov5m model.
 
+More about yolov5: [https://blog.roboflow.com/yolov5-improvements-and-evaluation/](url)
+
 There are some steps that need to be followed in order to be able to train and implement your own yolov5 model. Here I will go through what I did. This is very rough and only for basic understanding, so i recommend looking up tutorials online as the steps may vary for different devices.
 
 This is mostly for my own documentation purposes for future reference.
@@ -45,14 +47,12 @@ Click on the dataset > raw > show download code, and it should return something 
 curl -L "https://public.roboflow.com/ds/<Your Unique Private Key>" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
 ```
 If that doesnt work, try this
-
 ```
 Invoke-WebRequest -Uri "https://public.roboflow.com/ds/<Your Unique Private Key>" -OutFile "roboflow.zip"
 Expand-Archive -Path "roboflow.zip" -DestinationPath "."
 Remove-Item "roboflow.zip"
 ```
 Now the train and test filders will have some images, annotations and I got a data.yaml file, that contains data that looked something like this:
-
 ```
 train: ./data/dataset_folder/images/train  
 val: ./data/dataset_folder/images/val
